@@ -1,0 +1,14 @@
+
+internationalization: https://locize.com/blog/react-i18next/#better-translation-management
+next js / strapi and twilio https://github.com/ravgeetdhillon/tasks-assignment-twilio-strapi-nextjs/blob/master/frontend/config/axios.js
+
+tailwindcss https://tailwindcss.com/docs/guides/nextjs
+https://medium.com/dogus-tech-digital-solutions/creating-strapi-app-with-postgresql-e22f00d48b04
+
+PRIORITIES: 
+nextjs
+tailwind
+
+- we cookies pop up 
+- subscribe pop up 
+- strapi email connection 
