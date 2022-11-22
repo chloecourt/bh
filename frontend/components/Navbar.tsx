@@ -1,20 +1,14 @@
-import { Fragment } from "react";
+"use client";
+
+import { navigation } from "../utils/constants";
+import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
-  BellIcon,
   XMarkIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from "next/image";
-
-const navigation = [
-  { name: "Tickets", href: "/tickets/Tickets", current: false },
-  { name: "Merch", href: "/merch/Shop", current: false },
-  { name: "Pix", href: "/pix/Pix", current: false },
-  { name: "Contact", href: "/contact/Contact", current: false },
-];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -22,7 +16,7 @@ function classNames(...classes: string[]) {
 
 export function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white-800 shadow-lg">
+    <Disclosure as="nav" className="bg-white-800 shadow-lg top-0 w-full fixed">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,18 +34,22 @@ export function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href="/contact/Contact">
-                    <Image
-                      className="block h-8 w-auto lg:hidden"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                      alt="Your Company"
-                    />
-                  </Link>
-                  <Link href="/contact/Contact">
+                  <Link href="/">
                     <Image
                       className="hidden h-8 w-auto lg:block"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                      alt="Your Company"
+                      height={32}
+                      width={37}
+                      src="/../public/images/piggy.png"
+                      alt="logo"
+                    />
+                  </Link>
+                  <Link href="/">
+                    <Image
+                      className="block h-8 w-auto lg:hidden"
+                      height={32}
+                      width={37}
+                      src="/../public/images/piggy.png"
+                      alt="logo"
                     />
                   </Link>
                 </div>
@@ -78,14 +76,14 @@ export function Navbar() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-white p-1 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-0.5 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                {/* <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
@@ -147,7 +145,7 @@ export function Navbar() {
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu> */}
               </div>
             </div>
           </div>
