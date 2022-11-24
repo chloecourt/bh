@@ -24,3 +24,4 @@ List of Things To Do:
   - checkout with stripe
 - cookies modal 
 - check internationalization : https://nextjs.org/docs/advanced-features/i18n-routing 
+- aws connection AWS RDS : https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html
