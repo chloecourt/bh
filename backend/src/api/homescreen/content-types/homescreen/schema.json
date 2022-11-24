@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "homescreens",
+  "info": {
+    "singularName": "homescreen",
+    "pluralName": "homescreens",
+    "displayName": "homescreen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -12,3 +12,15 @@ tailwind
 - we cookies pop up 
 - subscribe pop up 
 - strapi email connection 
+
+
+Questions what is node vs the v8
+
+List of Things To Do: 
+- set up and deploy postgres strapi backend 
+- footer : social media icons for following and disclaimer
+- contact page - submit form / 
+- ecommerce landing page 
+  - checkout with stripe
+- cookies modal 
+- check internationalization : https://nextjs.org/docs/advanced-features/i18n-routing 

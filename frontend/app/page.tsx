@@ -1,46 +1,23 @@
-const page = () => {
-  return (
-    <div>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-      <h1 className="text-orange-500 bold font-serif m-2">hello</h1>
-    </div>
-  );
-};
+// const getHomeScreen = async () => {
+//   const url =
+//     "http://localhost:1337/uploads/arizona_mountainscape_152a1bfac6.jpg";
+//   const options = {
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   };
+//   const response = await fetch(url, options);
+//   if (!response.ok) {
+//     console.error(response.statusText);
+//     throw new Error("An error occured please try again");
+//   }
+//   const data = await response.json();
+//   return data;
+// };
 
-export default page;
+export default async () => {
+  // const data = await getHomeScreen();
+  const data = "meow";
+  console.log("this is homescreen fetch", data);
+  return <div>Hi there!</div>;
+};
