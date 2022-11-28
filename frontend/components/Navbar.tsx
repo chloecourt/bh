@@ -16,7 +16,10 @@ function classNames(...classes: string[]) {
 
 export function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white-800 shadow-lg top-0 w-full fixed">
+    <Disclosure
+      as="nav"
+      className="bg-white-800 shadow-lg top-0 w-full fixed z-50 block"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
