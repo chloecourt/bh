@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body>
+      <body className="bg-red-700">
         <Navbar />
-        <main className="bottom-5"> {children}</main>
+        <main className="flex flex-col justify-center p-3"> {children}</main>
         <Footer />
       </body>
     </html>

@@ -1,6 +1,8 @@
 import { fetchAPI, getStrapiURL } from "../lib/api";
 import Image from "next/image";
 
+// swr stale while rendering
+
 const Page = async () => {
   const { title, description, imageUrl } = await fetchAPI("landing-page");
 
