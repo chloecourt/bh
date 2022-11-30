@@ -12,7 +12,7 @@ const onSubmit = (e: any) => {
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center w-full fixed bottom-0 bg-red-600">
+    <footer className="flex flex-col justify-center w-full fixed bottom-0 bg-red-800">
       <div className="flex justify-center">
         <div className="flex justify-center gap-20 p-5">
           <div className="">
