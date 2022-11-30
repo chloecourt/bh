@@ -1,6 +1,8 @@
+"use client";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import UserProvider from "../context/UserContext";
 export default function RootLayout({
   children,
 }: {
@@ -10,9 +12,11 @@ export default function RootLayout({
     <html>
       <head />
       <body className="bg-red-700">
-        <Navbar />
-        <main className="flex flex-col justify-center p-3"> {children}</main>
-        <Footer />
+        <UserProvider>
+          <Navbar />
+          <main className="flex flex-col justify-center p-3"> {children}</main>
+          <Footer />
+        </UserProvider>
       </body>
     </html>
   );
