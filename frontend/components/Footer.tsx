@@ -4,6 +4,7 @@ import Image from "next/image";
 import fbIcon from "../public/images/fbIcon.svg";
 import instaIcon from "../public/images/instaIcon.svg";
 import youtubeIcon from "../public/images/youtubeIcon.svg";
+import FormInput from "./blocks/FormInput";
 
 const onSubmit = (e: any) => {
   // something
@@ -23,9 +24,17 @@ export const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col">
-            <h2 className="bold">Subscribe</h2>
             <form onSubmit={(e) => onSubmit(e)}>
-              <input className="border" type="input"></input>
+              <FormInput
+                label="Subscribe"
+                inputAttributes={{
+                  onChange: () => {
+                    console.log("hello");
+                  },
+                  type: "text",
+                  required: false,
+                }}
+              />
             </form>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="bg-red-700">
+      <body className="bg-red-600">
         <UserProvider>
           <Navbar />
           <main className="flex flex-col justify-center p-3"> {children}</main>

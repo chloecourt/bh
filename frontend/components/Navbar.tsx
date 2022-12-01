@@ -12,8 +12,10 @@ import {
 import Link from "next/link";
 import AvatarMenu from "./Navigation/AvatarMenu";
 import { classNames } from "../lib/styling";
+import { useState } from "react";
 
 export function Navbar() {
+  const [user, setUser] = useState({});
   return (
     <Disclosure
       as="nav"
@@ -78,15 +80,27 @@ export function Navbar() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-white p-1 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-0.5 focus:ring-offset-gray-800"
+                  className="rounded-full bg-transparent p-1 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-0.5 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
+                  <ShoppingBagIcon
+                    className="h-6 w-6 bg-transparent"
+                    aria-hidden="true"
+                  />
                 </button>
 
                 {/* Profile dropdown */}
-                <h1>Login</h1>
-                <AvatarMenu />
+                {user ? (
+                  <Link
+                    href="/login"
+                    className="text-gray-900 hover:text-white hover:bg-gray-700
+                    px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Login
+                  </Link>
+                ) : (
+                  <AvatarMenu />
+                )}
               </div>
             </div>
           </div>
