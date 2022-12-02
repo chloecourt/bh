@@ -1,5 +1,6 @@
 import { fetchAPI, getStrapiURL } from "../lib/api";
 import Image from "next/image";
+import bhIcon from "../public/images/bh-icon-transparent.png";
 
 // swr stale while rendering
 
@@ -9,7 +10,8 @@ const Page = async () => {
   // TODO: need to make sure every image has an alt description inputted by strapi user
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="relative flex flex-col justify-center">
+      <Image src={bhIcon} alt="bh-icon" />
       {/* <h1>hello</h1>
       <span className="self-center">
         <h1>{title}</h1>
