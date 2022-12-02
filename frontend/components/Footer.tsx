@@ -5,7 +5,7 @@ import { useRef } from "react";
 import fbIcon from "../public/images/fbIcon.svg";
 import instaIcon from "../public/images/instaIcon.svg";
 import youtubeIcon from "../public/images/youtubeIcon.svg";
-import FormInput from "./blocks/FormInput";
+import FormInput from "./sub-components/FormInput";
 
 const onSubmit = (e: any) => {
   // something
@@ -34,6 +34,7 @@ export const Footer = () => {
                   type: "email",
                   required: false,
                   placeholder: "Email",
+                  autocomplete: "username",
                 }}
               />
             </form>

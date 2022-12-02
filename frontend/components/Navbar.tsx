@@ -21,7 +21,7 @@ export function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-white-800 shadow-lg top-0 w-full z-50 block"
+      className="bg-white-800 shadow-lg w-full z-50 block fixed top-0"
     >
       {({ open }) => (
         <>

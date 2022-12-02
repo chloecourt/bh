@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import FormInput from "./blocks/FormInput";
+import FormInput from "./sub-components/FormInput";
 import { useRef } from "react";
 const GetInTouch = () => {
   const contactFirstName = useRef(null);
@@ -13,11 +13,12 @@ const GetInTouch = () => {
       <h1>Get in Touch</h1>
       <form className="flex flex-col w-7/12">
         <FormInput
-          label={"First Name"}
+          label="First Name"
           inputAttributes={{
             type: "text",
             required: true,
             ref: contactFirstName,
+            autocomplete: "email",
           }}
         />
         <FormInput
@@ -34,15 +35,11 @@ const GetInTouch = () => {
             type: "email",
             required: true,
             ref: contactEmail,
+            autocomplete: "username",
           }}
         />
         <label>Message</label>
-        <textarea
-          className="rounded"
-          name="contact-message"
-          value=""
-          rows={10}
-        />
+        <textarea className="rounded" name="contact-message" rows={10} />
         <button type="submit">Submit</button>
       </form>
     </div>

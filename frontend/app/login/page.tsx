@@ -1,5 +1,5 @@
 "use client";
-import FormInput from "../../components/blocks/FormInput";
+import FormInput from "../../components/sub-components/FormInput";
 import { useState, useRef } from "react";
 const Login = () => {
   //useRef
@@ -33,7 +33,7 @@ const Login = () => {
     console.log("in login handle submit");
   };
   return (
-    <div className="flex flex-row gap-5">
+    <div className="flex flex-row gap-9 justify-center overflow-hidden ">
       <div className="flex flex-col items-center">
         <h2>Sign In</h2>
         <form data-testid="sign-in-form" onSubmit={handleSignIn}>
@@ -44,6 +44,7 @@ const Login = () => {
               type: "email",
               placeholder: "Email",
               ref: signInEmail,
+              autocomplete: "username",
             }}
           />
           <FormInput
@@ -53,6 +54,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
+              autocomplete: "current-password",
             }}
           />
           <button className="bg-white rounded-lg px-5 m-5" type="submit">
@@ -91,6 +93,7 @@ const Login = () => {
               required: true,
               type: "email",
               placeholder: "Email",
+              autocomplete: "username",
             }}
           />
           <FormInput
@@ -100,6 +103,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
+              autocomplete: "new-password",
             }}
           />
           <FormInput
@@ -109,6 +113,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
+              autocomplete: "new-password",
             }}
           />
           <button type="submit" className="bg-white rounded-lg px-5 m-5">
