@@ -1,32 +1,58 @@
 "use client";
 import FormInput from "../../components/blocks/FormInput";
-import { FormEvent, useState } from "react";
-
+import { useState, useRef } from "react";
 const Login = () => {
+  //useRef
+  // sign in
+  const signInEmail = useRef(null);
+  const signInPassword = useRef(null);
+  //useRef
+  // create account
+  const createAccountFirstName = useRef(null);
+  const createAccountLastName = useRef(null);
+  const createAccountEmail = useRef(null);
+  const createAccountPassword = useRef(null);
+  const createAccountConfirmPassword = useRef(null);
+
   const [login, setLogin] = useState({});
-  const handleCreateAccount = (e: FormEvent<HTMLFormElement>) => {
+  const handleSignIn = (e: React.SyntheticEvent): void => {
+    e.preventDefault();
+    console.log("handle sign in was clicked");
+    /*
+    const target = e.target as typeof e.target & {
+      email: { value: string };
+      password: { value: string };
+    };
+    const email = target.email.value; // typechecks!
+    const password = target.password.value; // typechecks!
+    // etc...
+     */
+  };
+  const handleCreateAccount = (e: React.SyntheticEvent) => {
     e.preventDefault();
     console.log("in login handle submit");
   };
   return (
     <div className="flex flex-row gap-5">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         <h2>Sign In</h2>
-        <form>
+        <form data-testid="sign-in-form" onSubmit={handleSignIn}>
           <FormInput
-            label="email"
+            label="Email"
             inputAttributes={{
-              onChange: () => console.log("login"),
               required: true,
               type: "email",
+              placeholder: "Email",
+              ref: signInEmail,
             }}
           />
           <FormInput
-            label="password"
+            label="Password"
             inputAttributes={{
-              onChange: () => console.log("login"),
+              ref: signInPassword,
               required: true,
               type: "password",
+              placeholder: "Password",
             }}
           />
           <button className="bg-white rounded-lg px-5 m-5" type="submit">
@@ -36,29 +62,53 @@ const Login = () => {
       </div>
       <div className="flex flex-col items-center">
         <h2>Create an Account</h2>
-        <form onSubmit={(e) => handleCreateAccount(e)}>
+        <form
+          data-testid="create-acount-form"
+          onSubmit={(e) => handleCreateAccount(e)}
+        >
           <FormInput
-            label="first name"
+            label="First Name"
             inputAttributes={{
-              onChange: () => console.log("login"),
+              ref: createAccountFirstName,
               required: true,
               type: "text",
+              placeholder: "First Name",
             }}
           />
           <FormInput
-            label="last name"
+            label="Last Name"
             inputAttributes={{
-              onChange: () => console.log("login"),
+              ref: createAccountLastName,
               required: true,
               type: "text",
+              placeholder: "Last Name",
             }}
           />
           <FormInput
-            label="email"
+            label="Email"
             inputAttributes={{
-              onChange: () => console.log("login"),
+              ref: createAccountEmail,
               required: true,
               type: "email",
+              placeholder: "Email",
+            }}
+          />
+          <FormInput
+            label="Password"
+            inputAttributes={{
+              ref: createAccountPassword,
+              required: true,
+              type: "password",
+              placeholder: "Password",
+            }}
+          />
+          <FormInput
+            label="Password"
+            inputAttributes={{
+              ref: createAccountConfirmPassword,
+              required: true,
+              type: "password",
+              placeholder: "Password",
             }}
           />
           <button type="submit" className="bg-white rounded-lg px-5 m-5">

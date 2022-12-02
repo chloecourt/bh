@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import fbIcon from "../public/images/fbIcon.svg";
 import instaIcon from "../public/images/instaIcon.svg";
 import youtubeIcon from "../public/images/youtubeIcon.svg";
@@ -12,6 +13,7 @@ const onSubmit = (e: any) => {
 };
 
 export const Footer = () => {
+  const subscribeEmail = useRef(null);
   return (
     <footer className="shadow-inner flex flex-col justify-center w-full fixed bottom-0 bg-red-600 ">
       <div className="flex justify-center">
@@ -28,11 +30,10 @@ export const Footer = () => {
               <FormInput
                 label="Subscribe"
                 inputAttributes={{
-                  onChange: () => {
-                    console.log("hello");
-                  },
-                  type: "text",
+                  ref: subscribeEmail,
+                  type: "email",
                   required: false,
+                  placeholder: "Email",
                 }}
               />
             </form>
