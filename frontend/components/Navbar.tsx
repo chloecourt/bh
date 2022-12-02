@@ -1,9 +1,9 @@
 "use client";
 
-import { navigation } from "../utils/constants";
 import Image from "next/image";
-import { Fragment } from "react";
+import { navigation } from "../utils/constants";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Fragment } from "react";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -13,6 +13,8 @@ import Link from "next/link";
 import AvatarMenu from "./Navigation/AvatarMenu";
 import { classNames } from "../lib/styling";
 import { useState } from "react";
+import { setToken } from "../lib/auth";
+import { unsetToken } from "../lib/auth";
 
 export function Navbar() {
   const [user, setUser] = useState({});

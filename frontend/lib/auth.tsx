@@ -1,5 +1,6 @@
 import Router from "next/router";
-import { setCookie, getCookie } from "cookies-next";
+import { setCookie, getCookie, removeCookies } from "cookies-next";
+import { Z_ASCII } from "zlib";
 
 export const setToken = (data: any) => {
   if (typeof window === "undefined") {
@@ -12,6 +13,17 @@ export const setToken = (data: any) => {
   if (getCookie("username")) {
     Router.reload();
   }
+};
+
+export const unsetToken = () => {
+  if (typeof window === "undefined") {
+    return;
+  }
+  removeCookies("id");
+  removeCookies("jwt");
+  removeCookies("username");
+
+  Router.reload();
 };
 /**
  * 7:16

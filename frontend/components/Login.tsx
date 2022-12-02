@@ -29,8 +29,6 @@ const Login = () => {
             type: "email",
           }}
         />
-        <label>message</label>
-        <textarea></textarea>
       </form>
     </div>
   );
