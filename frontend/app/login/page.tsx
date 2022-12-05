@@ -1,6 +1,7 @@
 "use client";
 import FormInput from "../../components/sub-components/FormInput";
 import { useState, useRef } from "react";
+import PrimaryBtn from "../../components/PrimaryBtn";
 const Login = () => {
   //useRef
   // sign in
@@ -33,9 +34,9 @@ const Login = () => {
     console.log("in login handle submit");
   };
   return (
-    <div className="flex flex-row gap-9 justify-center overflow-hidden ">
+    <div className="flex flex-row gap-9 justify-center w-full">
       <div className="flex flex-col items-center">
-        <h2>Sign In</h2>
+        <h2 className="semibold py-4 text-2xl text-white">Sign In</h2>
         <form data-testid="sign-in-form" onSubmit={handleSignIn}>
           <FormInput
             label="Email"
@@ -57,13 +58,11 @@ const Login = () => {
               autoComplete: "current-password",
             }}
           />
-          <button className="bg-white rounded-lg px-5 m-5" type="submit">
-            Submit
-          </button>
+          <PrimaryBtn title="Submit" type="submit" />
         </form>
       </div>
       <div className="flex flex-col items-center">
-        <h2>Create an Account</h2>
+        <h2 className="semibold py-4 text-2xl text-white">Create an Account</h2>
         <form
           data-testid="create-acount-form"
           onSubmit={(e) => handleCreateAccount(e)}
@@ -116,9 +115,7 @@ const Login = () => {
               autoComplete: "new-password",
             }}
           />
-          <button type="submit" className="bg-white rounded-lg px-5 m-5">
-            Submit
-          </button>
+          <PrimaryBtn type="submit" title="Submit" />
         </form>
       </div>
     </div>

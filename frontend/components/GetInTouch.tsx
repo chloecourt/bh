@@ -40,7 +40,9 @@ const GetInTouch = () => {
         />
         <label>Message</label>
         <textarea className="rounded" name="contact-message" rows={10} />
-        <button type="submit">Submit</button>
+        <button className="primary-btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

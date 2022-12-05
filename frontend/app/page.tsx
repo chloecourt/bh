@@ -34,18 +34,10 @@ export default function Page() {
   });
 
   return (
-    <div className="relative flex flex-col items-center">
-      <div className="h-96 w-96 relative flex flex-col justify-center">
-        <Image src={bhIcon} alt="bh-icon" layout="fill" />
+    <div className="">
+      <div className="relative flex flex-col items-center justify-center h-[3000] w-[3000] ">
+        <Image src={bhIcon} alt="bh-icon" className="" />
       </div>
-      {/* <h1>hello</h1>
-      <span className="self-center">
-        <h1>{title}</h1>
-        {description && <h4>{description}</h4>}
-      </span>
-      <div className="self-center">
-        <Image priority width={500} height={850} src={imageUrl} alt="arizona" />
-      </div> */}
     </div>
   );
 }

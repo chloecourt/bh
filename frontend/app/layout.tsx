@@ -11,10 +11,12 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="bg-red-600">
+      <body className="bg-red-600 h-screen">
         <UserProvider>
           <Navbar />
-          <main className="flex flex-col justify-center p-3"> {children}</main>
+          <main className="flex justify-center items-center mx-auto h-[calc(100%_-_14rem)] w-3/4 p-3">
+            {children}
+          </main>
           <Footer />
         </UserProvider>
       </body>
