@@ -34,7 +34,7 @@ export const Footer = () => {
                   type: "email",
                   required: false,
                   placeholder: "Email",
-                  autocomplete: "username",
+                  autoComplete: "username",
                 }}
               />
             </form>

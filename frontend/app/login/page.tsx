@@ -44,7 +44,7 @@ const Login = () => {
               type: "email",
               placeholder: "Email",
               ref: signInEmail,
-              autocomplete: "username",
+              autoComplete: "username",
             }}
           />
           <FormInput
@@ -54,7 +54,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
-              autocomplete: "current-password",
+              autoComplete: "current-password",
             }}
           />
           <button className="bg-white rounded-lg px-5 m-5" type="submit">
@@ -93,7 +93,7 @@ const Login = () => {
               required: true,
               type: "email",
               placeholder: "Email",
-              autocomplete: "username",
+              autoComplete: "username",
             }}
           />
           <FormInput
@@ -103,7 +103,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
-              autocomplete: "new-password",
+              autoComplete: "new-password",
             }}
           />
           <FormInput
@@ -113,7 +113,7 @@ const Login = () => {
               required: true,
               type: "password",
               placeholder: "Password",
-              autocomplete: "new-password",
+              autoComplete: "new-password",
             }}
           />
           <button type="submit" className="bg-white rounded-lg px-5 m-5">

@@ -8,7 +8,7 @@ type InputAttributesType = {
   required: boolean;
   placeholder?: string;
   className?: string;
-  autocomplete?: string;
+  autoComplete?: string;
 };
 /**
  *
