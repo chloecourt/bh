@@ -2,6 +2,7 @@
 import React from "react";
 import FormInput from "./sub-components/FormInput";
 import { useRef } from "react";
+import PrimaryBtn from "./PrimaryBtn";
 const GetInTouch = () => {
   const contactFirstName = useRef(null);
   const contactLastName = useRef(null);
@@ -9,9 +10,9 @@ const GetInTouch = () => {
   const contactMessage = useRef(null);
 
   return (
-    <div>
-      <h1>Get in Touch</h1>
-      <form className="flex flex-col w-7/12">
+    <div className="flex flex-col justify-center items-center">
+      <h1 className="semibold py-4 text-2xl text-white my-2">Get in Touch</h1>
+      <form className="flex flex-col w-full">
         <FormInput
           label="First Name"
           inputAttributes={{
@@ -40,9 +41,7 @@ const GetInTouch = () => {
         />
         <label>Message</label>
         <textarea className="rounded" name="contact-message" rows={10} />
-        <button className="primary-btn" type="submit">
-          Submit
-        </button>
+        <PrimaryBtn type="submit" title="Submit" />
       </form>
     </div>
   );
