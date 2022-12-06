@@ -6,6 +6,8 @@ import fbIcon from "../public/images/fbIcon.svg";
 import instaIcon from "../public/images/instaIcon.svg";
 import youtubeIcon from "../public/images/youtubeIcon.svg";
 import FormInput from "./sub-components/FormInput";
+import Link from "next/link";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const onSubmit = (e: any) => {
   // something
@@ -42,9 +44,9 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex flex-row h-8 w-full justify-center gap-3 mb-5">
-        <Image src={fbIcon} height={32} width={32} alt="facebook-icon" />
-        <Image src={instaIcon} alt="instagram-icon" height={32} width={32} />
-        <Image src={youtubeIcon} alt="youtube-icon" height={32} />
+        <SocialMediaIcons href={"#"} src={fbIcon} alt={"facebook-icon"} />
+        <SocialMediaIcons href={"#"} src={instaIcon} alt={"instagram-icon"} />
+        <SocialMediaIcons href={"#"} src={youtubeIcon} alt={"youtube-icon"} />
       </div>
     </footer>
   );
