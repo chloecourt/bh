@@ -17,7 +17,7 @@ const onSubmit = (e: any) => {
 export const Footer = () => {
   const subscribeEmail = useRef(null);
   return (
-    <footer className="shadow-inner flex flex-col justify-center w-full fixed bottom-0 bg-red-600 ">
+    <footer className="shadow-inner flex flex-col justify-center w-full h-32 fixed bottom-0 bg-red-600 ">
       <div className="flex justify-center">
         <div className="flex justify-center gap-20 p-5">
           <div className="">
@@ -43,7 +43,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row h-8 w-full justify-center gap-3 mb-5">
+      <div className="flex flex-row h-8 w-full justify-center items-center gap-3 mb-5">
         <SocialMediaIcons href={"#"} src={fbIcon} alt={"facebook-icon"} />
         <SocialMediaIcons href={"#"} src={instaIcon} alt={"instagram-icon"} />
         <SocialMediaIcons href={"#"} src={youtubeIcon} alt={"youtube-icon"} />
