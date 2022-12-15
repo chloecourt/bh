@@ -81,16 +81,18 @@ export function Navbar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="rounded-full bg-transparent p-1 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-0.5 focus:ring-offset-gray-800"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <ShoppingBagIcon
-                    className="h-6 w-6 bg-transparent"
-                    aria-hidden="true"
-                  />
-                </button>
+                <Link href="/cart">
+                  <button
+                    type="button"
+                    className="rounded-full bg-transparent p-1 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-0.5 focus:ring-offset-gray-800"
+                  >
+                    <span className="sr-only">View notifications</span>
+                    <ShoppingBagIcon
+                      className="h-6 w-6 bg-transparent"
+                      aria-hidden="true"
+                    />
+                  </button>
+                </Link>
 
                 {/* Profile dropdown */}
                 {user ? (
