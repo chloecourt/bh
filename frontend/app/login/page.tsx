@@ -34,7 +34,7 @@ const Login = () => {
     console.log("in login handle submit");
   };
   return (
-    <div className="flex flex-row gap-9 justify-center w-full">
+    <div className="flex flex-col sm:flex-row gap-9 justify-center w-full">
       <div className="flex flex-col items-center">
         <h2 className="semibold py-4 text-2xl text-white">Sign In</h2>
         <form data-testid="sign-in-form" onSubmit={handleSignIn}>
