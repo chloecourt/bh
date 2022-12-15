@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="bg-red-600 h-screen">
+      <body className="bg-red-600">
         <UserProvider>
           <Navbar />
           <main className="flex justify-center items-center mx-auto h-[calc(100%_-_14rem)] w-3/4 p-3">
