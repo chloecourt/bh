@@ -17,7 +17,7 @@ const onSubmit = (e: any) => {
 export const Footer = () => {
   const subscribeEmail = useRef(null);
   return (
-    <footer className="shadow-inner flex flex-col justify-center w-full h-32 fixed bottom-0 bg-red-600 ">
+    <footer className="shadow-inner flex flex-col justify-center w-full h-32 fixed bottom-0 bg-red-600">
       <div className="flex justify-center">
         <div className="flex justify-center gap-20 p-5">
           <div className="">
