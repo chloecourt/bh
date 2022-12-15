@@ -1,4 +1,4 @@
-import React from "react";
+import FormInput from "../sub-components/FormInput";
 
 const SubscribeModal = () => {
   const handleSubmit = () => {
@@ -6,13 +6,25 @@ const SubscribeModal = () => {
   };
 
   return (
-    <div>
-      <h1>Stay up to Date</h1>
+    <div className="flex flex-col items-center">
+      <h1 className="">Stay up to Date</h1>
       <form onSubmit={handleSubmit}>
-        <label>name</label>
-        <input type="input" />
-        <label>email</label>
-        <input type="input" />
+        <FormInput
+          label={""}
+          inputAttributes={{
+            placeholder: "Name",
+            type: "text",
+            required: false,
+          }}
+        />
+        <FormInput
+          label={""}
+          inputAttributes={{
+            placeholder: "Email",
+            type: "email",
+            required: false,
+          }}
+        />
       </form>
     </div>
   );
